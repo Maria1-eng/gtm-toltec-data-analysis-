@@ -8,7 +8,7 @@ The goal of this project is to evaluate how accurately the TolTEC camera recover
 
 All notebooks are located in the `TolTEC Galaxy Analysis/` folder.
 
-### `leer_fits.ipynb` — How to read FITS files
+### `01_leer_fits.ipynb` — How to read FITS files
 Introductory guide to working with FITS files using `astropy.io.fits`. Covers:
 - Opening a FITS file and inspecting its structure with `info()`
 - Accessing image data (HDU arrays) and headers
@@ -17,7 +17,7 @@ Introductory guide to working with FITS files using `astropy.io.fits`. Covers:
 
 **Start here if you are new to FITS files.**
 
-### `leer_flujo.ipynb` — Flux recovery pipeline
+### `02_leer_flujo.ipynb` — Flux recovery pipeline
 Step-by-step manual for the full flux comparison workflow. Covers:
 - Loading a TolTEC observation with `ToltecSignalFits` and applying a weight cut
 - Reading simulated input sources from a `.csv` catalog with `SimuInputSources`
@@ -25,17 +25,17 @@ Step-by-step manual for the full flux comparison workflow. Covers:
 - Extracting PyBDSF source catalogs with `BdsfCat`
 - Matching catalogs with `CatalogMatch` and plotting results
 
-### `Una_fuente.ipynb` — Single source example
+### `03_Una_fuente.ipynb` — Single source example
 Minimal worked example using a single source catalog (`sources.csv`) at 1.1 mm (a1100). Useful for understanding the basic photometry workflow before scaling up.
 
-### `a1400.ipynb` — Flux calibration at 1.4 mm and 2.0 mm
+### `04_a1400.ipynb` — Flux calibration at 1.4 mm and 2.0 mm
 Demonstrates that the input-to-observed flux relationship is not one-to-one and shows how to derive a calibration constant:
 - Loads `toltec_simu_a1400_filtered.fits` and `toltec_simu_a2000_filtered.fits`
 - Computes the ratio between input and observed flux across all sources
 - Applies the mean ratio as a calibration factor
 - Plots flux comparisons before and after calibration
 
-### `nearby_galaxies.ipynb` — Full multi-wavelength galaxy analysis
+### `05_nearby_galaxies.ipynb` — Full multi-wavelength galaxy analysis
 Complete analysis pipeline applied to the galaxy NGC 3938 across all three TolTEC bands (1.1 mm, 1.4 mm, 2.0 mm):
 - Loads simulated TolTEC observations for each array
 - Segments images with `photutils` to identify sources
@@ -47,11 +47,11 @@ Complete analysis pipeline applied to the galaxy NGC 3938 across all three TolTE
 
 ```
 TolTEC Galaxy Analysis/
-├── leer_fits.ipynb                          # How to read FITS files
-├── leer_flujo.ipynb                         # Flux recovery pipeline manual
-├── Una_fuente.ipynb                         # Single source example
-├── a1400.ipynb                              # Flux calibration at 1.4 mm and 2.0 mm
-├── nearby_galaxies.ipynb                    # Full multi-wavelength galaxy analysis
+├── 01_leer_fits.ipynb                       # How to read FITS files
+├── 02_leer_flujo.ipynb                      # Flux recovery pipeline manual
+├── 03_Una_fuente.ipynb                      # Single source example
+├── 04_a1400.ipynb                           # Flux calibration at 1.4 mm and 2.0 mm
+├── 05_nearby_galaxies.ipynb                 # Full multi-wavelength galaxy analysis
 │
 ├── Toltec_simu_a1100_filtered.fits          # Simulated TolTEC observation at 1.1 mm
 ├── Toltec_simu_a1400_filtered.fits          # Simulated TolTEC observation at 1.4 mm
