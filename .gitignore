@@ -1,6 +1,11 @@
 # macOS
 .DS_Store
 
+# Generated output files
+convolved.fits
+ratio.fits
+*_conv_repro.fits
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
